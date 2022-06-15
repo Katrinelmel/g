@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+  <style type="text/css">
+
+
+.container {
+width: 100%;
+hight:120px;
+
+}
+
+
+.cols{
+width:50%;
+hight:300px;
+float: left;
+
+}
+
+
+.row{
+width:50%;
+hight:600px;
+float: right;
+lenght:600px;
+}
+
+.row1{
+width: 100%;
+hight:300px;
+
+}
+
+  </style> 
+</head>
+<body>
+<h1 style="color:#4682B4; text-align:center"> Уровень развития информатизации в регионе</h1>
+<div class="container">
+
+    <div id="cols" class="cols">
+    <script>
+
+
+
+        Highcharts.chart('cols', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Численность сотрудников в сфере ИКТ'
+
+            },
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [ {
+                    name: 'Городищенский муниципальный район',
+                    y: 91,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 213,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Урюпинский муниципальный район',
+                    y: 212, color: '#7FFFD4'
+                }, {
+                    name: 'Палласовский муниципальный район',
+                    y: 144,color: '#40E0D0'
+                }, {
+                    name: 'Городской округ город Урюпинск',
+                    y: 117,color: '#00CED1'
+                }, {
+                    name: 'Новоаннинский муниципальный район',
+                    y: 117,color: '#87CEEB'
+                }, {
+                    name: 'Кумылженский муниципальный райн',
+                    y: 109,color: '#4682B4'
+                }, {
+                    name: 'Серафимовичский район',
+                    y: 106,color: '#40E0D0'
+                }, 
+{
+                    name: 'Калачаевский муниципальный район',
+                    y: 93,color: '#40E0D0'
+                }, 
+{
+                    name: 'Городской округ город Камышин',
+                    y: 92,color: '#40E0D0'
+                }, 
+{
+                    name: 'Степенновское сельское поселение',
+                    y: 100, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+</div>
+
+
+
+ 
+  <div id="row" class="row">
+<script>
+        Highcharts.chart('row', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Муниципальные расходы на информатизацию'
+
+            },
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+            plotOptions: {
+               pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Города',
+                colorByPoint: true,
+                data: [{
+                    name: 'Алексеевский муниципальный район',
+                    y:12913120, color: '#0000CD'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 166640272,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Светлоярский муниципальный район',
+                    y: 6669278, color: '#7FFFD4'
+                }, {
+                    name: 'Ольховский муниципальный район',
+                    y: 5418830.5,color: '#40E0D0'
+                }, {
+                    name: 'Октябрьский муниципальный район',
+                    y: 2169093.5,color: '#00CED1'
+                }, {
+                    name: 'Палласовский муниципальный район',
+                    y: 1653143.13,color: '#87CEEB'
+                }, {
+                    name: 'Урюпинский муниципальный район',
+                    y: 1085740,color: '#4682B4'
+                }, {
+                    name: 'Старополтавский муниципальный район',
+                    y: 455882.813,color: '#40E0D0'
+                }, 
+{
+                    name: 'Еланский муниципальный район',
+                    y: 372497.5, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+   
+</div>
+
+</div>
+
+ <div id="row1" class="row1">
+<script>
+        Highcharts.chart('row1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Количество пользователей ГосУслуг'
+
+            },
+
+
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+
+
+            plotOptions: {
+  
+               pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+
+            series: [{
+                name: 'Города',
+                colorByPoint: true,
+                data: [{
+                    name: 'Октябрьский муниципальный район',
+                    y: 330, color: '#0000CD'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 3742,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Новоаннинский муниципальный район',
+                    y: 60, color: '#7FFFD4'
+                }, {
+                    name: 'Кумылженский муниципальный район',
+                    y: 19,color: '#40E0D0'
+                }, {
+                    name: 'Глазуновское сельское поселение',
+                    y: 14,color: '#00CED1'
+                }, {
+                    name: 'Береславское сельское поселение',
+                    y: 12,color: '#87CEEB'
+                }, {
+                    name: 'Пятиизбянское сельское поселение',
+                    y: 12,color: '#4682B4'
+                }, {
+                    name: 'Терновское сельское поселение',
+                    y: 12,color: '#40E0D0'
+                }, 
+]
+            }]
+        });
+
+    </script>
+   
+
+</div>
+<p><a href="Модуль социально-экономического развития.html">На главную</a></p>
+<p><a href="Дашборд 3.html">Следующий дашборд</a></p>
+</body>
+</html>

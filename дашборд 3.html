@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+  <style type="text/css">
+
+
+.container {
+width: 100%;
+hight:120px;
+
+}
+
+
+.cols{
+width:50%;
+hight:300px;
+float: left;
+
+}
+
+
+.row{
+width:50%;
+hight:600px;
+float: right;
+lenght:600px;
+}
+
+.row1{
+width: 100%;
+hight:300px;
+
+}
+
+  </style> 
+</head>
+<body>
+<h1 style="color:#4682B4; text-align:center"> Уровень развития информатизации с позиции граждан</h1>
+<div class="container">
+
+    <div id="cols" class="cols">
+    <script>
+
+
+
+        Highcharts.chart('cols', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Количество мест приема граждан'
+
+            },
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [ {
+                    name: 'Городищенский муниципальный район',
+                    y: 322,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Городской округ город-герой Волгоград',
+                    y: 414,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Камышинский муниципальный район',
+                    y: 422, color: '#7FFFD4'
+                }, {
+                    name: 'Палласовский муниципальный район',
+                    y: 198,color: '#40E0D0'
+                }, {
+                    name: 'Городской округ город Волжский',
+                    y: 447,color: '#00CED1'
+                }, {
+                    name: 'Суровикинскийй муниципальный район',
+                    y: 341,color: '#87CEEB'
+                }, {
+                    name: 'Калачаевский муниципальный райн',
+                    y: 268,color: '#4682B4'
+                }, {
+                    name: 'Жирновский муниципальный район',
+                    y: 261,color: '#40E0D0'
+                }, 
+{
+                    name: 'Быковский муниципальный район',
+                    y: 149,color: '#40E0D0'
+                }, 
+{
+                    name: 'Городской округ город Камышин',
+                    y: 335,color: '#40E0D0'
+                }, 
+{
+                    name: 'Степенновское сельское поселение',
+                    y: 100, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+</div>
+
+
+
+ 
+  <div id="row" class="row">
+<script>
+        Highcharts.chart('row', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'column'
+            },
+            title: {
+                text: 'Регионы с высоким спросом пользователей на 1 ПК'
+
+            },
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+            plotOptions: {
+               column: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: 'Города',
+                colorByPoint: true,
+                data: [{
+                    name: 'Александровское сельское поселение',
+                    y:14, color: '#0000CD'
+                }, {
+                    name: 'Большовское сельское поселение',
+                    y: 24,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: 'Захаровское сельское поселение',
+                    y: 30, color: '#7FFFD4'
+                }, {
+                    name: 'Логовское сельское поселение',
+                    y: 15,color: '#40E0D0'
+                }, {
+                    name: 'Приморское сельское поселение',
+                    y: 20,color: '#00CED1'
+                }, {
+                    name: 'Чилековское сельское поселение',
+                    y: 18,color: '#87CEEB'
+                }, {
+                    name: 'Верхневодянское сельское поселение',
+                    y: 13,color: '#4682B4'
+                },  
+{
+                    name: 'Еланский муниципальный район',
+                    y: 13, color: '#6495ED'
+                }]
+            }]
+        });
+
+    </script>
+   
+</div>
+
+</div>
+
+ <div id="row1" class="row1">
+<script>
+        Highcharts.chart('row1', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'column'
+            },
+            title: {
+                text: 'Доля муниципальных служащих и сотрудников в подведомственных муниципалитету структур зарегистрированных в ЕСИА'
+
+            },
+
+
+            tooltip: {
+                pointFormat: '{series.name}: {point.percentage:.1f}%'
+            },
+
+
+            plotOptions: {
+  
+               column: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'blue'
+                        }
+                    }
+                }
+            },
+
+            series: [{
+                name: 'Города',
+                colorByPoint: true,
+                data: [{
+                    name: '01.01.2017',
+                    y: 60, color: '#0000CD'
+                }, {
+                    name: '01.01.2018',
+                    y: 89,
+                    sliced: true,
+                    selected: true,color: '#4169E1'
+                }, {
+                    name: '01.01.2019',
+                    y: 92.2900009, color: '#7FFFD4'
+                }, {
+                    name: '01.01.2020',
+                    y: 99,color: '#40E0D0'
+                }
+]
+            }]
+        });
+
+    </script>
+   
+
+</div>
+<p><a href="Модуль социально-экономического развития.html">На главную</a></p>
+<p><a href="Дашборд 4.html">Следующий дашборд</a></p>
+</body>
+</html>
